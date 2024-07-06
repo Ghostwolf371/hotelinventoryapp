@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RoomsComponent } from './rooms/rooms.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-root',
+  selector: 'hinv-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  // template: `<h1>Hello World from Deez Nutz</h1>
+  //   <p>Angular can catch deez hands</p> `,
+  styleUrl: './app.component.scss',
+  imports: [RouterOutlet, RoomsComponent, CommonModule],
 })
 export class AppComponent {
   title = 'hotelinventoryapp';
+
+  role = 'Admin';
 }
